@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@100;200;300;400;500;600;800;900&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -45,6 +47,8 @@ body {
 /* header styles */
 
 header {
+  display: flex;
+  flex-direction: column;
   height: 100vh;
   background-image: url('../images/png/header-bg.png');
   background-repeat: no-repeat;
@@ -89,6 +93,24 @@ header {
   gap: 26px;
 }
 
+.hero {
+  flex-grow: 1;
+}
+.hero-container {
+  height: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.title {
+  font-family: 'Lobster', display;
+  font-size: 100px;
+  line-height: 100%;
+  color: white;
+}
+
 /* main */
 
 main {
@@ -96,6 +118,11 @@ main {
 }
 
 /* responsive */
+@media (max-width: 1200px) {
+  .title {
+    font-size: 80px;
+  }
+}
 
 @media (max-width: 900px) {
   .logo {
@@ -105,6 +132,10 @@ main {
   .sitenav-icons a img {
     width: 50px;
     height: 50px;
+  }
+
+  .title {
+    font-size: 70px;
   }
 }
 
@@ -116,10 +147,22 @@ main {
   .menu-btn {
     display: block;
   }
+
+  .title {
+    font-size: 60px;
+  }
 }
 
 @media (max-width: 450px) {
   header {
     background-image: url('../images/png/header-bg-mobile.png');
+  }
+
+  .sitenav-icons {
+    gap: 10px;
+  }
+
+  .title {
+    font-size: 50px;
   }
 }
