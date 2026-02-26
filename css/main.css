@@ -37,8 +37,9 @@ body {
 
 .container {
   width: 100%;
-  max-width: 1412px;
+  max-width: 1452px;
   margin: 0 auto;
+  padding: 20px;
 }
 
 /* header styles */
@@ -54,13 +55,18 @@ header {
   padding-bottom: 33px;
 }
 
-.site-nav {
-}
-
 .sitenav-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.menu-btn {
+  display: none;
 }
 .sitenav-links {
   display: flex;
@@ -87,4 +93,33 @@ header {
 
 main {
   flex-grow: 1;
+}
+
+/* responsive */
+
+@media (max-width: 900px) {
+  .logo {
+    width: 160px;
+    height: 75px;
+  }
+  .sitenav-icons a img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sitenav-links {
+    display: none;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+}
+
+@media (max-width: 450px) {
+  header {
+    background-image: url('../images/png/header-bg-mobile.png');
+  }
 }
